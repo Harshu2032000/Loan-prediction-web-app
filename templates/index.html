@@ -1,0 +1,125 @@
+<html> 
+<head>
+  <style>
+    .button
+{
+    font-size: 13px;
+    color:green;
+}
+    </style>
+  
+</head>
+    <body class="centered-wrapper">
+        <title>HOME LOAN PREDICTION</title>
+        <form>
+          
+
+        
+            <h1>Home Loan Prediction</h1>
+            
+                <div>
+                    <label for="Name">Enter Your Full Name:</label>
+                    <input type="text" name="Name" id="Name" />
+    
+                </div>
+                <div> 
+            <p>-Please select your gender:</p>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label><br><br>
+        </div>
+
+        <div>       
+        <p>-Select Maritial Status</p>
+                <select name="marital_status" id="marital_status">
+
+                <option value="">-Select Marital Status-</option>
+                <option value="Single">Single</option>
+                <option value="Married">Married</option>
+                
+            </select>
+        </div>
+
+        <div>  
+            <p>-Please select dependent:</p>
+            <input type="radio" id="1" name="dependent" value="1">
+            <label for="1">1</label><br>
+            <input type="radio" id="2" name="dependent" value="2">
+            <label for="2">2</label><br>
+            <input type="radio" id="3" name="dependent" value="3">
+            <label for="3">3</label><br>
+            <input type="radio" id="4" name="dependent" value="4">
+            <label for="4">4</label><br>
+            <input type="radio" id="5" name="dependent" value="5">
+            <label for="5">5</label>
+
+            </div>
+<div>
+            <p>-Have you salaried?</p>
+            <input type="radio" id="YES" name="salaried" value="YES">
+              <label for="YES">Yes</label><br>
+              <input type="radio" id="NO" name="salaried" value="NO">
+              <label for="NO">No</label>
+            </div> 
+
+            <div>
+            <p>*Income should in thousand(e.g)10000</p>
+              <label for="Income">Income:</label>
+              <input type="text" id="Income" name="Income">
+
+              <label for="CoApplicant-Income">CoApplicant-Income:</label>
+              <input type="text" id="CoApplicant-Income" name="CoApplicant-Income">
+
+            </div>
+            <div>
+                <P>-Select Loan Amount</P>
+              <div class="slidecontainer">
+                <input type="range" min="1000" max="10000000" value="50" class="slider" id="myRange">
+                <p>Amount: <span id="demo"></span></p>
+              </div>
+
+              <div>
+              <script>
+              var slider = document.getElementById("myRange");
+              var output = document.getElementById("demo");
+              output.innerHTML = slider.value;
+              
+              slider.oninput = function() {
+                output.innerHTML = this.value;
+              }
+              </script>
+</div>
+
+<div>
+            <p>-Select Credit History:</p>
+            <input type="radio" id="1" name="dependent" value="1">
+            <label for="1">1</label><br>
+            <input type="radio" id="2" name="dependent" value="2">
+            <label for="2">Less Than 1</label><br>
+
+        </div>   
+        
+        <div>
+          <p>-Select Property Area</p>
+            <select name="Property" id="Property">
+            <option value="Urban">Urban</option>
+                <option value="Semi-Urban">Semi-Urban</option>
+                <option value="Rular">Rular</option>
+                
+            </div>
+
+            <br>
+            <br>
+              <input type="submit" value="Predict" />
+         
+        
+    </form>
+{{prediction_text}}
+    </body>
+
+
+
+</html>
